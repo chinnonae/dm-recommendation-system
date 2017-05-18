@@ -1,4 +1,13 @@
-# DmRecommendationSystem
+# Movie recommendation system based on users' preference
+The recommendation is based on 16 music genre.
+
+This project is a part of data mining class
+
+<br>
+<br>
+<br>
+
+----------------------------------
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
