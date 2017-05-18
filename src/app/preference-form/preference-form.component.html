@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit()" >
+  <!-- <div *ngFor="let input of inputTypes">
+    {{input}}
+    <span *ngFor="let num of rates">
+      <input type="radio" [name]="input" [value]="num" (change)="onSelectionChange(input, num)" required>{{num}}
+    </span>
+  </div> -->
+  <table class="table">
+    <tr *ngFor="let input of inputTypes" >
+      <td class="">{{input}}</td>
+      <td *ngFor="let num of rates">
+        <input class="radio" type="radio" [name]="input" [value]="num" (change)="onSelectionChange(input, num)" required><span>{{num}}</span>
+      </td>
+    </tr>
+  </table>
+  <input type="submit" class="btn btn-success"/>
+</form>

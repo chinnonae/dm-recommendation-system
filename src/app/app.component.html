@@ -1,3 +1,20 @@
-<h1>
-  {{title}}
-</h1>
+<h1>Movie recommendation based on music preference</h1>
+<div *ngIf="topic" id="input-form">
+  <h4>Rate your preference (1 is what you like the lease and 5 is what you like the most)</h4>
+  <app-preference-form [inputTypes]="inputTypes" [model]="inputModel" (prediction)="onPrediction($event)"></app-preference-form>
+</div>
+
+<div *ngIf="recommendationGenre">
+  <div>
+    <h3>Recommended Genre</h3>
+    <ul>
+      <li *ngFor="let genre of recommendationGenre">{{genre}}</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Recommended Movie</h3>
+    <ul>
+      <li *ngFor="let movie of recommendationMovie"><a [href]="movie.movie_imdb_link">{{movie.movie_title}}</a></li>
+    </ul>
+  </div>
+</div>

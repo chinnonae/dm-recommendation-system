@@ -5,16 +5,24 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { PredictionService } from './services/prediction.service';
+import { PreferenceFormComponent } from './preference-form/preference-form.component'
+import { RecommendationService } from './services/recommendation.service'
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PreferenceFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    PredictionService,
+    RecommendationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
